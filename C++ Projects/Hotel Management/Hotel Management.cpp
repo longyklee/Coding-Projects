@@ -121,7 +121,7 @@ int main()
 			char tf;
 			cout<<"ARE YOU SURE?:";
 			tf=getche();
-			if (tf='y'){
+			if (tf=='y'){
 				int i;
 				for (i=0;i<1000;i++){
 					rooms[i]=rand()%2;
@@ -131,8 +131,10 @@ int main()
 				save();
 				output("\nSUCCESS!\n");
 			}
-			else{
+			else if (tf=='n'){
 				output("\nJOB CANCELED\n");
+			}else{
+				output("\nFAILED.TRY AGAIN\n");
 			}
 		}
 	 }
