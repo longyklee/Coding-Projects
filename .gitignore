@@ -34,3 +34,6 @@
 # Zipped Files
 *.zip
 *.7z
+
+# Data Files
+*.hotel
