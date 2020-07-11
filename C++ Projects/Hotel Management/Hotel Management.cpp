@@ -21,8 +21,7 @@ int rooms[1000];
 int main()
 {
  srand(time(NULL));
- openrooms();openfname();openlname();
- char fname[20],lname[20];
+ openrooms();
  int roomnum;
  output("##CFresort MANAGEMENT SYSTEM##");getch();
  for (;;){
@@ -35,7 +34,7 @@ int main()
 	 output("\n");
 	 if (job==1){
 	 	output("AVALIABLE ROOM QUERY\n");
-	 	openrooms();openfname();openlname();
+	 	openrooms();
 	 	roomnum=intinput("Room Number");
 	 	if (rooms[roomnum]==1){
 	 		char a[20];
@@ -63,6 +62,7 @@ int main()
 	 	roomnum=intinput("Room Number");
 	 	output("CHECKING ROOM...\n");sleep(1.5);
 	 	if (rooms[roomnum]==0){
+	 		string fname,lname;
 	 		output("First Name: ");
 	 		cin>>fname;
 		 	output("Last Name: ");
@@ -73,9 +73,6 @@ int main()
 		 	output("LOADING...\n");sleep(1.5);
 			cout<<fname<<" "<<lname<<" REGISTERED UNDER ROOM "<<setw(3)<<roomnum<<" SUCCESSFULLY"<<endl;
 			rooms[roomnum]=1;
-			fnames[roomnum]=fname;
-			lnames[roomnum]=lname;
-			save();
 		}
 		else{
 			cout<<"ROOM "<<setw(3)<<roomnum<<" IS NOT AVALIABLE"<<endl;
@@ -173,24 +170,6 @@ void openrooms(){
 	while (infile >> a)
 	{
 		rooms[i]=a;
-		i++;
-	}
-}
-void openlname(){
-	int i=0,a;
-	ifstream infile("lastname.hotel");
-	while (infile >> a)
-	{
-		lnames[i]=a;
-		i++;
-	}
-}
-void openfname(){
-	int i=0,a;
-	ifstream infile("firstname.hotel");
-	while (infile >> a)
-	{
-		fnames[i]=a;
 		i++;
 	}
 }
