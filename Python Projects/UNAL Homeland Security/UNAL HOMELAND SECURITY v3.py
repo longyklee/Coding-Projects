@@ -32,7 +32,7 @@ def program():
                     origin = eval(input("Origin (Codes 2-3): "))
                     print("Loading System...  Finding Database...")
                     time.sleep(2)
-                    if 1000000000 < idnum < 9999999999 and 10 < origin < 999:
+                    if 1000000000 < idnum < 9999999999 and 10 <= origin < 999:
                         print(name, "and ID Number", idnum, "has NO criminal records and is APPROVED for access!")
                         
                         
@@ -51,7 +51,7 @@ def program():
                         origin = eval(input("Origin (Codes 2-3): "))
                         print("Loading...")
                         time.sleep(2)
-                        if 10000 < idnum < 99999999999999999999 and 10 < origin < 999:
+                        if 10000 < idnum < 99999999999999999999 and 10 <= origin < 999:
                             print(name, "and ID Number, ",idnum, "from country code ",country, "is VALID and is APPROVED for access!")
                         else:
                             print("ID Number and/or Origin Code is NOT VALID!")
@@ -81,7 +81,7 @@ def program():
                     destination = eval(input("Destination (Codes 2-3): "))
                     print("Loading System...  Finding Database...")
                     time.sleep(2)
-                    if 1000000000 < idnum < 9999999999 and 10<destination<999:
+                    if 1000000000 < idnum < 9999999999 and 10<=destination<999:
                         print(name, "and ID Number", idnum, "has NO criminal records and is APPROVED for access!")
                         
                         
@@ -100,7 +100,7 @@ def program():
                         destination = eval(input("Destination (Codes 2-3): ")) 
                         print("Loading...")
                         time.sleep(2)
-                        if 10000 < idnum < 99999999999999999999 and 10<destination<999:
+                        if 10000 < idnum < 99999999999999999999 and 10<=destination<999:
                             print(name, "and ID Number,",idnum, "from country code ",country, "is VALID and is APPROVED for access!")
                         else:
                             print("ID Number and/or Destination Code is NOT VALID!")
@@ -114,7 +114,7 @@ def program():
                     destination = eval(input("Destination (Codes 2-3): "))
                     print("Loading System...  Finding Database...")
                     time.sleep(2)
-                    if 1000000 < idnum < 9999999 and 10<destination<999:
+                    if 1000000 < idnum < 9999999 and 10<=destination<999:
                         print(name," and ID Number", idnum ,"is CLEARIFIED as a Military partner and is APPROVED for access!")
                         
                         
