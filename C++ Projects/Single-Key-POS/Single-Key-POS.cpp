@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 #include <termios.h>
 #include <unistd.h>
-#include <stdio.h>
 using namespace std;
 int getch(void)
 {
